@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>back to top with jquery</title>
+    <script src="jquery/jquery-1.9.1.min.js"></script>
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #rocket{
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            bottom: 10px;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+<div style="width: 100%;height: 5000px">
+
+    <p style="text-align: center;width: 100%;margin-top: 100px;font-size: 16px;font-family: Consolas">SCROLL TO LET THE ROCKET SHOW OUT</p>
+</div>
+
+
+
+<p id="rocket">
+    <img src="../flypig.gif">
+</p>
+
+
+<script>
+    $(document).on('scroll',function(){
+        if($('body').scrollTop() > 200){
+            $("#rocket").show(500);
+        }else{
+            $("#rocket").hide(500);
+        }
+    });
+    $(function(){
+        $("#rocket").click(function(){
+            $('body').animate({'scrollTop':0},500);
+        })
+    })
+</script>
+</body>
+</html>
