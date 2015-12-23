@@ -8,8 +8,8 @@ window.onscroll = function(){
     } else { 
         go.style.display = "none"; 
     } 
-}
-//yes ,j just wangt to get a green block
+};
+
 //go按钮的点击函数，执行效果。
 var ptt=0;
 var rocket = document.getElementById('flypig');
